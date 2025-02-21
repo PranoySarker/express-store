@@ -7,7 +7,6 @@ import { createStore } from "@/app/actions";
 
 const StoreForm = () => {
   const [loading, setLoading] = useState(false);
-
   const {
     register,
     handleSubmit,
@@ -17,6 +16,8 @@ const StoreForm = () => {
   const router = useRouter();
 
   const onSubmit = async (data) => {
+    // console.log("Form Data:", data);
+
     setLoading(true);
 
     const result = await createStore(data);
@@ -73,7 +74,6 @@ const StoreForm = () => {
             <option value="Singapore">Singapore</option>
             <option value="USA">USA</option>
           </select>
-
           {errors.country && (
             <p className="text-red-500 mt-1">{errors.country.message}</p>
           )}
@@ -89,7 +89,6 @@ const StoreForm = () => {
             <option value="Gadgets">Gadgets</option>
             <option value="Grocery">Grocery</option>
           </select>
-
           {errors.category && (
             <p className="text-red-500 mt-1">{errors.category.message}</p>
           )}
@@ -105,7 +104,6 @@ const StoreForm = () => {
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
           </select>
-
           {errors.currency && (
             <p className="text-red-500 mt-1">{errors.currency.message}</p>
           )}
@@ -117,14 +115,18 @@ const StoreForm = () => {
             placeholder="Email"
             className="border border-gray-300 w-full p-3 my-3"
             {...register("email", {
-              required: "Please enter your emails",
-              pattern: /^\S+@\S+$/i,
+              required: "Please enter your email",
+              pattern: {
+                value: /^\S+@\S+$/i,
+                message: "Please enter a valid email address",
+              },
             })}
           />
           {errors.email && (
             <p className="text-red-500 mt-1">{errors.email.message}</p>
           )}
         </div>
+
         <button
           type="submit"
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
