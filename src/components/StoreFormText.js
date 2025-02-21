@@ -25,24 +25,24 @@ const StoreFormText = () => {
           Where is your store located
         </h1>
         <p className="text-sm font-semibold text-gray-500">
-          Set your store's default location so we can optimize store access and
+          Set your stores default location so we can optimize store access and
           speed for your customers
         </p>
       </div>
 
       <div className="mt-4">
         <h1 className="text-lg font-bold text-gray-700 ">
-          What's your category
+          Whats your category
         </h1>
         <p className="text-sm font-semibold text-gray-500">
-          Set your store's default category so that we can optimize store access
+          Set your stores default category so that we can optimize store access
           and speed for your customers
         </p>
       </div>
 
       <div className="mt-4">
         <h1 className="text-lg font-bold text-gray-700 ">
-          Choose store's currency
+          Choose stores currency
         </h1>
         <p className="text-sm font-semibold text-gray-500">
           This is the main currency you wish to sell in
@@ -54,7 +54,7 @@ const StoreFormText = () => {
           Store contact email
         </h1>
         <p className="text-sm font-semibold text-gray-500">
-          This is the email you'll use to send notifications to and recieve
+          This is the email youll use to send notifications to and recieve
           orders from customers
         </p>
       </div>
