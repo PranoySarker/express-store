@@ -1,7 +1,7 @@
 import React from "react";
 
 const checkDomain = () => {
-  return <div>checkDomain</div>;
+  return <div>checkDomain </div>;
 };
 
 export default checkDomain;
