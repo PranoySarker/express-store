@@ -12,9 +12,9 @@ const CreateStorePage = () => {
       </p>
       <hr />
 
-      <div className="flex my-10">
+      <div className="flex flex-col lg:flex-row my-10">
         <StoreFormText />
-        <div className="border border-gray-300 rounded-md shadow-md p-5 w-1/2 mx-auto">
+        <div className="border border-gray-300 rounded-md shadow-md p-5 w-full lg:w-1/2 mx-auto">
           <StoreForm />
         </div>
       </div>
